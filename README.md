@@ -10,7 +10,10 @@ One of these two models combines the attributes of the Wasserstein Generative Ad
 Lastly, the models are assessed by computing some of the most common _stylized empirical features_ (i.e. observed and characteristic statistical properties of financial time series) of the sampled paths where Sig-CWGAN outperforms in features where GARCH is not able to.
 
 
-Implementations are taken from:
+Models were taken from:
+
+*GARCH
+  [Documentation](https://arch.readthedocs.io/en/latest/univariate/introduction.html)
 
 *Sig-CWGAN
   [Article](https://arxiv.org/abs/2006.05421)
