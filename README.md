@@ -1,2 +1,10 @@
 # Semester-Project-GenAI-Time-Series
-Semester project at ETH Zurich on Generative AI for time series generation
+Semester project at ETH Zurich: Generative AI for time series generation
+
+Abstract
+
+Generation of artificial financial time series is an active research area which aims to develop alternative methods to synthesize data which, in most of the cases, is scarce or difficult to access. In this work, the author compare and evaluate two existing recent and novel machine learning approaches, generative-artificial intelligence (AI) models specifically created for the generation of time series of historical stock prices, against a baseline model to produce long time series.
+
+One of these two models combines the attributes of the Wasserstein Generative Adversarial Networks (WGANs) with the mathematical framework of the signature of a path, which produces an easier formulation of the optimization problem and reduce training times: Conditional Signature-WGAN (Sig-CWGAN), with additional metrics during training. While a second model, created specifically for long time series generation, uses a transformers architecture along with a diffusion model (TransFusion). Both generative models and the baseline model (GARCH) are tuned and trained to generate longer time series than usual and original implementations, over $800$ timestamps.
+
+Lastly, the models are assessed by computing some of the most common \emph{stylized empirical features} (i.e. observed and characteristic statistical properties of financial time series) of the sampled paths where Sig-CWGAN outperforms in features where GARCH is not able to.
