@@ -7,4 +7,15 @@ Generation of artificial financial time series is an active research area which 
 
 One of these two models combines the attributes of the Wasserstein Generative Adversarial Networks (WGANs) with the mathematical framework of the signature of a path, which produces an easier formulation of the optimization problem and reduce training times: Conditional Signature-WGAN (Sig-CWGAN), with additional metrics during training. While a second model, created specifically for long time series generation, uses a transformers architecture along with a diffusion model (TransFusion). Both generative models and the baseline model (GARCH) are tuned and trained to generate longer time series than usual and original implementations, over $800$ timestamps.
 
-Lastly, the models are assessed by computing some of the most common \emph{stylized empirical features} (i.e. observed and characteristic statistical properties of financial time series) of the sampled paths where Sig-CWGAN outperforms in features where GARCH is not able to.
+Lastly, the models are assessed by computing some of the most common _stylized empirical features_ (i.e. observed and characteristic statistical properties of financial time series) of the sampled paths where Sig-CWGAN outperforms in features where GARCH is not able to.
+
+
+Implementations are taken from:
+
+*Sig-CWGAN
+  [Article](https://arxiv.org/abs/2006.05421)
+  [Code](https://github.com/SigCGANs/Conditional-Sig-Wasserstein-GANs)
+
+*TransFusion
+  [Article](https://arxiv.org/abs/2307.12667)
+  [Code](https://github.com/fahim-sikder/TransFusion)
