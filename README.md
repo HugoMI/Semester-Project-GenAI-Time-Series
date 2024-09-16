@@ -12,7 +12,7 @@ Lastly, the models are assessed by computing some of the most common _stylized e
 
 Models were taken from:
 
-*GARCH (from 'arch' library)
+*GARCH (from `arch` library)
   [Documentation](https://arch.readthedocs.io/en/latest/univariate/introduction.html)
 
 *Sig-CWGAN
