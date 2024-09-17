@@ -123,7 +123,17 @@ def power_law(y):
     # return np.average(np.array([power_law_pos, power_law_neg]))
     return np.array([power_law_pos, power_law_neg])
 
+# Real data as tensor data type
+x_real_N = log_returns.to_numpy().T
+x_real_N = torch.from_numpy(x_real_N).float().unsqueeze(2)
+# Setting appropiate dimensions of dataset to apply functions in a vectorized way
+x_real_Nn = torch.unsqueeze(x_real_N,1)
 
+
+# Real data as numpy array data type
+x_real_np = x_real_N.detach().clone()
+x_real_np = x_real_np.cpu().numpy()[:, :, 0]
+# x_real_df = pd.DataFrame(x_real_np)
 
 # Number of lags
 max_lag = 100
@@ -214,9 +224,11 @@ x_fake00_Mm = torch.unsqueeze(paths_torch, 1)
 x_fake00_np = paths_np
 
 # Computation of stylized features
+stylfeat_real_pre = compute_stylfeat(x_real_Nn[:])
 stylfeat_fake00_pre = compute_stylfeat(x_fake00_Mm[:])
 
 # Computation of additional stylized feature (power law)
+powerlaw_real_df = pd.DataFrame(np.apply_along_axis(power_law, 1, x_real_np[:]), columns=["Powerlaw 0<x", "Powerlaw 0>x"])
 powerlaw_fake00_df = pd.DataFrame(np.apply_along_axis(power_law, 1, x_fake00_np[:]), columns=["Powerlaw 0<x", "Powerlaw 0>x"])
 
 # powerlaw_real_df.to_csv(".\computations\powerlaw_real_df.csv")
