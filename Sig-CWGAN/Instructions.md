@@ -1,4 +1,4 @@
-This folder contains the script to generate artificial paths from the Sig-CWGAN model as well as the script to evaluate (compute the stylized features and first four moments of) the generated paths.
+This folder contains the script to generate artificial paths from the Sig-CWGAN model as well as some required scripts to be replaced in the original implementation. These are additions, modifications, considerations to the original implementation which can be found in the referenced repository.
 
 Additionally, it includes the following scripts (with slight modifications to the original ones) to obtain comparable results to the report:
   - requirements.yml is the modified installation file for the dedicated environment. It basically contains the version of each library used during experiments.
