@@ -1,1 +1,1 @@
-This folder contains the script to generate artificial paths from the TransFusion model as well as the script to evaluate (compute the stylized features and first four moments of) the generated paths.
+This folder contains the script to generate artificial paths from the TransFusion model as well as the script to evaluate (compute the stylized features and first four moments of) the generated paths. These are additions, modifications, considerations to the original implementation which can be found in the referenced repository.
